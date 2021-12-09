@@ -1,0 +1,23 @@
+# docker images by size
+alias dibs="docker images --format \"{{.ID}}\t{{.Size}}\t{{.Repository}}\" | sort -k 2 -h"
+alias k=kubectl
+alias h=helm
+alias dc='docker compose '
+alias dcurl='docker run -it --rm curlimages/curl '
+# https://opensource.com/article/19/7/bash-aliases
+# ls sort by size, linux
+#alias lt='ls --human-readable --size -1 -S --classify'
+alias lt='du -sh * | sort -h'
+alias mnt='mount | grep -E ^/dev | column -t'
+alias showListeningPorts='sudo lsof -i -P | grep LISTEN'
+alias rcopy='rsync -avhW --compress-level=0 --progress'
+alias cpv='rsync -ah --info=progress2'
+
+#
+# Create a Python virtual environment
+#
+alias ve='python3 -m venv ./venv'
+alias va='source ./venv/bin/activate'
+
+
+# eof
